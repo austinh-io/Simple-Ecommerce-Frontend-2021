@@ -1,0 +1,62 @@
+.header {
+  grid-area: header;
+  text-align: center;
+}
+.aside-left {
+  grid-area: aside-left;
+}
+.article {
+  grid-area: article;
+}
+.aside-right {
+  grid-area: aside-right;
+}
+.footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+/* .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-auto-columns: minmax(200px, auto);
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-areas:
+    "header header header header"
+    "aside-left article article aside-right"
+    "footer footer footer footer";
+
+  /* align-items: center;
+  align-content: center; */
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35m 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translate(-3px) scale(1.1);
+}
+
+p {
+  grid-area: article;
+}

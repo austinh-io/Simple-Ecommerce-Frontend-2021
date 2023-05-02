@@ -1,0 +1,119 @@
+:root {
+    --main-bg: #191f31;
+    --nav-bg: #3a3b41;
+    --font-body-color: #e1e1e1;
+    --font-title-color: #00ff9d;
+
+    --font-main-nav-color: #D4D9D6;
+    --font-main-nav-hover-color: #E1E6E3;
+
+    --font-link-color: #6194d6;
+    --font-link-visited-color: #63729e;
+    --font-link-active-color: #398af3;
+}
+
+body{
+    text-size-adjust: none;
+    font-size-adjust: none;
+    background-color: var(--main-bg);
+    color: var(--font-body-color);
+    font-family: Roboto, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3{
+    font-weight: bolder;
+    color: var(--font-title-color);
+}
+
+h2, h3 {
+    color: var(--font-body-color);
+}
+
+h1{
+    font-size: 5rem;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+}
+
+p{
+    font-size: 1rem;
+}
+
+a{
+    color: var(--font-link-color);
+    transition: all 0.2s ease-in-out;
+}
+
+a:visited{
+    color: var(--font-link-visited-color)
+
+}
+
+a:active, a:hover{
+    color: var(--font-link-active-color)
+
+}
+
+footer{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.main-nav-item, .main-nav-item:visited, .main-nav-item:active{
+    color: var(--font-main-nav-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem;
+    text-decoration: none;
+    transition: font 0.2s ease-in-out;
+}
+
+.main-nav-item:hover{
+    color: var(--font-main-nav-hover-color);
+    font-size: 1.75rem;
+    text-shadow: 0 0 0.125rem #ffffff;
+}
+
+.main-nav {
+    background-color: var(--nav-bg);
+    margin: auto;
+    width: 80%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.bottom-container{
+    font-size: 0.9rem;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: auto;
+    }
+
+
+
+#title{
+    margin: auto;
+    margin-top: 7.5%;
+    width: 90%;
+}
+
+#subtitle {
+    margin-top: 0;
+    font-family: ador-hairline, sans-serif;
+    font-size: 3rem;
+}
+
+#home-body{
+    position: relative;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    text-indent: 2rem;
+}
+
+#home-body-first-sentence{
+    text-indent: 0;
+    font-weight: bold;
+}
+

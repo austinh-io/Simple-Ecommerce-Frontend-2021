@@ -1,0 +1,158 @@
+:root {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --nav-bg-primary: #212121;
+  --nav-bg-secondary: #f54683;
+
+  --nav-icon-primary: #ffffff;
+  --nav-icon-secondary: #f54683;
+  --transition-speed: 600ms;
+  --nav-width: 5rem;
+}
+
+nav {
+  /* DON'T FORGET TO CHANGE ME WHEN YOU ARE DONE */
+  /* display: none; */
+  /*  THIS TURNS OFF THE NAVIGATION! DON'T FORGET IT!!! */
+
+  position: absolute;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--nav-bg-primary);
+  transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  text-align: center;
+  background: var(--nav-bg-secondary);
+  letter-spacing: 0.3ch;
+  padding: 0.5rem 0;
+  font-size: 1.25em;
+}
+
+.logo:hover {
+  font-size: 1.5em;
+}
+
+.logo svg {
+  width: 1rem;
+  transition: all 600ms ease;
+}
+
+.logo-link {
+  color: white !important;
+  filter: none !important;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item svg {
+  width: 1rem;
+  margin: auto;
+  padding: 0;
+}
+
+.nav-item:hover {
+  background-color: var(--nav-bg-secondary);
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--nav-bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  fill: var(--nav-icon-primary);
+}
+
+/* Small Screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+}
+
+/*Large Screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    transition: opacity var(--transition-speed);
+  }
+
+  .logo svg {
+    transform: rotate(0deg);
+  }
+
+  .navbar:hover .logo svg {
+    transform: rotate(-360deg);
+    width: 3rem;
+  }
+}
